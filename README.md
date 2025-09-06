@@ -40,6 +40,13 @@ The following libraries must be installed in Arduino IDE:
 3. **Full Attack Mode:** Turns the Red LED on indicating its jamming all channels including Bluetooth in the 2.4 GHz band.
 4. **Stealth Attack Mode:** Turns the Red LED off while still jamming all channels in the 2.4 GHz band. 
 
+## Images
+![PCB](https://github.com/Egco2811/MinimalJammer/blob/main/images/No%20Case.jpeg?raw=true)
+![Front](https://github.com/Egco2811/MinimalJammer/blob/main/images/Front.jpeg?raw=true)
+![Ports](https://github.com/Egco2811/MinimalJammer/blob/main/images/Charging%20Port.jpeg?raw=true)
+
+
+
 ## License & Legal Disclaimer
 
 This project is for **educational purposes only** and unauthorized usage is **illegal**. Please check your country's laws and adhere to ethical guidelines.
