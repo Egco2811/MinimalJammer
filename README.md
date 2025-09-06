@@ -1,6 +1,6 @@
 # MinimalJammer
 
-This project is a minimal and portable implementation of FazJammer by William Afton and Antonio Martínez with a printed circuit board (PCB) and a Lithium Polymer (Li-Po) battery for power. The OLED display was removed in favor of three LEDs for idle, wifi and full attack modes. A fourth mode, stealth, was added to use the full attack mode without any lights on. A case measuring 88 x 63 x 24 mm encloses the board, battery and all the modules for portable use. 
+This project is a minimal and portable implementation of FazJammer by William Afton with a printed circuit board (PCB) and a Lithium Polymer (Li-Po) battery for power. The OLED display was removed in favor of three LEDs for idle, wifi and full attack modes. A fourth mode, stealth, was added to use the full attack mode without any lights on. A case measuring 88 x 63 x 24 mm encloses the board, battery and all the modules for portable use. 
 
 ## Requirements
 
