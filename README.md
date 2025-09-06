@@ -1,81 +1,56 @@
-# ESP8266 BLE(Bluetooth) & Wi-Fi Jammer
+# MinimalJammer
 
-This project aims to develop a jammer using ESP8266 to interfere with BLE and Wi-Fi networks. The project utilizes the RF24 library to generate interference in the 2.4 GHz bands and provides user feedback via an OLED display.
+This project is a minimal and portable implementation of FazJammer by William Afton and Antonio Martínez with a printed circuit board (PCB) and a Lithium Polymer (Li-Po) battery for power. The OLED display was removed in favor of three LEDs for idle, wifi and full attack modes. A fourth mode, stealth, was added to use the full attack mode without any lights on. A case measuring 88 x 63 x 24 mm encloses the board, battery and all the modules for portable use. 
 
-## 📌 Requirements
+## Requirements
 
-- **NodeMCU ESP8266** (or a compatible ESP8266-based board)
-- **NRF24L01+** module
-- **0.96" OLED SSD1306** display
-- **Push Button** (to switch modes)
-- **Connecting wires**
+- **NodeMCU ESP8266**
+- **NRF24L01+** 2.4 GHz Module
+- **1 Pin DIP Switch** For Turning the Device On
+- **4 Pin 6x6 Push Button** For Switching Modes
+- **Green Led**
+- **Yellow Led**
+- **Red Led**
+- **3x 220Ω (or any sufficiently high resistance value) Resistors** For Limiting LED Currents
+- **3.7 Volt Li-Po Battery Cell**
+- **TP4056 Type-C Li-Po Charging Board with Out Pins**
+- **2x M3x12 Hex Bolts**
+- **A 3D Printer**
 
-## 🛠 Required Libraries
+## Required Libraries
 
 The following libraries must be installed in Arduino IDE:
 
 - [RF24](https://github.com/nRF24/RF24)
-- [SPI](https://github.com/espressif/arduino-esp32/tree/master/libraries%2FSPI)
 - [ezButton](https://github.com/ArduinoGetStarted/button)
-- [Adafruit GFX](https://github.com/adafruit/Adafruit-GFX-Library)
-- [Adafruit SSD1306](https://github.com/adafruit/Adafruit_SSD1306)
 
-## ⚡ Hardware Connections
+## Steps
 
-| ESP8266 Pin | NRF24L01+ Pin | Description |
-|------------|---------------|-------------|
-| D2 (GPIO4) | CSN            | Chip Select |
-| D4 (GPIO2) | CE           | Module enable |
-| D5 (GPIO14)| SCK           | Serial clock signal |
-| D7 (GPIO13)| MOSI          | Data output |
-| D6 (GPIO12)| MISO          | Data input |
-| 3.3V       | VCC           | Power supply |
-| GND        | GND           | Ground |
+1. **Manufacture PCB:** Use a manufacturing service (such as JLCPCB or PCBWay) to manufacture the PCBs.
+2. **Solder the Components to the Board:** Source the required components using the Bill of Materials found in the project documents and solder each part according to the schematic.  
+3. **Install libraries**: Use **Library Manager** in Arduino IDE to install the required libraries.
+4. **Upload the code**: Open `jammer.ino` in Arduino IDE and upload it to your ESP8266 board.
+5. **Print the Case**: Use the provided STEP or STL files to print the case and assemble with two M3x12 hex bolts.
+7. **Power up the device**: Switch the device on using the DIP switch and use the push button to switch modes. 
 
-| ESP8266 Pin | OLED Pin | Description |
-|------------|---------|-------------|
-| D5 (GPIO14)| SDA     | Serial data line |
-| D6 (GPIO12)| SCL     | Serial clock line |
-| 3.3V       | VCC     | Power supply |
-| GND        | GND     | Ground |
+## Usage
 
-| ESP8266 Pin | Button Pin | Description |
-|------------|---------|-------------|
-| RX (GPIO3) | Button  | User input button (Another PIN Button to GND) |
+1. **Idle Mode:** Turns the Green LED on indicating its ready for user input. Nothing is transmitted.
+2. **Wifi Attack Mode:** Turns the Yellow LED on indicating its jamming all wifi channels in the 2.4 GHz band.
+3. **Full Attack Mode:** Turns the Red LED on indicating its jamming all channels including Bluetooth in the 2.4 GHz band.
+4. **Stealth Attack Mode:** Turns the Red LED off while still jamming all channels in the 2.4 GHz band. 
 
-## 🚀 Setup & Execution
+## Images
+![PCB](https://github.com/Egco2811/MinimalJammer/blob/main/images/No%20Case.jpeg?raw=true)
+![Front](https://github.com/Egco2811/MinimalJammer/blob/main/images/Front.jpeg?raw=true)
+![Ports](https://github.com/Egco2811/MinimalJammer/blob/main/images/Charging%20Port.jpeg?raw=true)
 
-1. **Make the connections**: Complete the hardware setup as per the table above.
-2. **Install libraries**: Use **Library Manager** in Arduino IDE to install the required libraries.
-3. **Upload the code**: Open `jammer.ino` in Arduino IDE and upload it to your ESP8266 board.
-4. **Power up the device**: Connect your ESP8266 to a power source. The OLED screen will display jammer information.
 
-## 📡 Usage
 
-When powered on, the device starts in **"Waiting Idly :("** mode by default.
-Press the button to switch between the following modes:
-
-1. **BLE(Bluetooth) & All 2.4 GHz** (Interferes with all Bluetooth, 2.4 GHz devices)
-2. **Just Wi-Fi** (Interferes only with Wi-Fi networks)
-3. **Waiting Idly :(** (Puts the device in standby mode)
-
-The current mode will be displayed on the OLED screen.
-
-**Note:** You can connect external power like small lipo batteries.
-
-**Warning:** The nRF24l01 module getting extremely hot during use. This does not affect operation probably. But it may overheat your hand :D.
-
-### Example photos
-![Front side of jammer](https://github.com/system-linux/FazJammer/blob/main/photos/1.jpg?raw=true)
-![Other side of jammer](https://github.com/system-linux/FazJammer/blob/f7895b19fa5819ae011fccfad6261fd778de5186/photos/2.jpg?raw=true)
-[![Video Aç](https://img.youtube.com/vi/4Mi9WWJwfMw/0.jpg)](https://www.youtube.com/watch?v=4Mi9WWJwfMw)
-## 📜 License & Legal Disclaimer
+## License & Legal Disclaimer
 
 This project is for **educational purposes only** and unauthorized usage is **illegal**. Please check your country's laws and adhere to ethical guidelines.
 
 ---
 
-**Developer:** [system-linux](https://github.com/system-linux)
-
-## Star History
-[![Star History Chart](https://api.star-history.com/svg?repos=system-linux/FazJammer&type=Date)](https://www.star-history.com/#system-linux/FazJammer&Date)
+**Developer:** [system-linux](https://github.com/system-linux), [Egco2811](https://github.com/Egco2811)
