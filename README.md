@@ -14,6 +14,8 @@ This project is a minimal and portable implementation of FazJammer by William Af
 - **3x 220Ω (or any sufficiently high resistance value) Resistors** For Limiting LED Currents
 - **3.7 Volt Li-Po Battery Cell**
 - **TP4056 Type-C Li-Po Charging Board with Out Pins**
+- **2x M3x12 Hex Bolts**
+- **A 3D Printer**
 
 ## Required Libraries
 
