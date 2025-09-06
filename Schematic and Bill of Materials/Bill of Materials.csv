@@ -9,3 +9,4 @@ SW1,1,SW_Push,Button_Switch_THT:SW_PUSH_6mm
 SW2,1,SW_SPST,Button_Switch_THT:SW_DIP_SPSTx01_Slide_6.7x4.1mm_W7.62mm_P2.54mm_LowProfile
 TP4056,1,~,Battery_Boards:TP4056 USB-C Breakout Board
 BATT,1,3000,Battery: Lithium Polymer Battery
+Bolts, 2, M3x12, No Footprint
