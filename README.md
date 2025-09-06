@@ -41,9 +41,9 @@ The following libraries must be installed in Arduino IDE:
 4. **Stealth Attack Mode:** Turns the Red LED off while still jamming all channels in the 2.4 GHz band. 
 
 ## Images
-![PCB](https://github.com/Egco2811/MinimalJammer/blob/main/images/No%20Case.jpeg?raw=true)
-![Front](https://github.com/Egco2811/MinimalJammer/blob/main/images/Front.jpeg?raw=true)
-![Ports](https://github.com/Egco2811/MinimalJammer/blob/main/images/Charging%20Port.jpeg?raw=true)
+![PCB](https://github.com/Egco2811/MinimalJammer/blob/main/Images/No%20Case.jpeg?raw=true)
+![Front](https://github.com/Egco2811/MinimalJammer/blob/main/Images/Front.jpeg?raw=true)
+![Ports](https://github.com/Egco2811/MinimalJammer/blob/main/Images/Charging%20Port.jpeg?raw=true)
 
 
 
